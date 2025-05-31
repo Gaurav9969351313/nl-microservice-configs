@@ -19,20 +19,12 @@ management:
   info.git:
     mode: full
     enabled: true
-  endpoints:
-    web:
-      exposure.include: "*"
+  endpoints.web.exposure.include: "*"
   endpoint:
     health:
       show-details: always
-      enabled: true
-      access: public
-    shutdown:
-      access: public
-      enabled: true
-    metrics:
-      access: public
-      enabled: true
+    shutdown.enabled: true
+    health.show-details: always
 
 logging.level:
   org:
