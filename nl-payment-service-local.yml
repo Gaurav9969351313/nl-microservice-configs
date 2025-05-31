@@ -6,7 +6,7 @@ spring:
     name: nl-payment-service
     
   datasource:
-    url: jdbc:mysql://localhost:3306/usersdb
+    url: jdbc:mysql://localhost:3306/paymentsdb
     username: adminuser
     password: StrongPassword123!
     driver-class-name: com.mysql.cj.jdbc.Driver
