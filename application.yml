@@ -25,13 +25,16 @@ management:
     health.show-details: always
 
 logging.level:
-    org:
-      springframework:
-        web: DEBUG
-    web: DEBUG
-    root: INFO
-    com.company_name.project_name.ms: DEBUG
-    com.company_name.cloud.infra: DEBUG
+  org:
+    springframework:
+      web: INFO
+      security: INFO
+  web: DEBUG
+  root: INFO
+  com.company_name.project_name.ms: DEBUG
+  com.company_name.cloud.infra: DEBUG
+  org.hibernate.SQL: DEBUG
+  org.hibernate.type.descriptor.sql.BasicBinder: TRACE
 
 server:
   servlet:
@@ -39,9 +42,31 @@ server:
   error:
     include-message: always
     include-binding-errors: always
-
+  tomcat:
+    threads:
+      max: 200
+      min-spare: 20
+    connection-timeout: 20000
+    
 spring:
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  main:
+    banner-mode: off
+    lazy-initialization: true       # Delay bean creation until first use
+    allow-bean-definition-overriding: false
+
+  datasource:
+    hikari:
+      maximum-pool-size: 5
+      minimum-idle: 2
+      pool-name: HikariPool-nl-service
+      idle-timeout: 30000
+      max-lifetime: 1800000
+      connection-timeout: 30000
+
