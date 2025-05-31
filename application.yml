@@ -1,5 +1,41 @@
+app:
+  eureka:
+    user: admin
+    pass: admin
+    host: localhost
+    port: 8761
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${app.eureka.user}:${app.eureka.pass}@${app.eureka.host}:${app.eureka.port}/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+    instance:
+      prefer-ip-address: true
+      hostname: localhost
+
 management:
-  endpoints:
-    web:
-      exposure:
-        include: 'health,info,metrics,prometheus'
+  info.git:
+    mode: full
+    enabled: true
+  endpoints.web.exposure.include: "*"
+  endpoint:
+    shutdown.enabled: true
+    health.show-details: always
+
+logging.level:
+    org:
+      springframework:
+        web: DEBUG
+    web: DEBUG
+    root: INFO
+    com.company_name.project_name.ms: DEBUG
+    com.company_name.cloud.infra: DEBUG
+
+server:
+  servlet:
+    context-path: /api/v1
+  error:
+    include-message: always
+    include-binding-errors: always
