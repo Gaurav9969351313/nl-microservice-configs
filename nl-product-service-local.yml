@@ -1,3 +1,4 @@
-spring:
-  profiles:
-    include: application-local
+
+logging:
+  level:
+    root: WARN
