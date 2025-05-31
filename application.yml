@@ -21,8 +21,14 @@ management:
     enabled: true
   endpoints.web.exposure.include: "*"
   endpoint:
+    
+  endpoint:
+    health:
+      show-details: always
+      enabled: true
     shutdown.enabled: true
-    health.show-details: always
+    metrics:
+      enabled: true
 
 logging.level:
   org:
@@ -47,7 +53,7 @@ server:
       max: 200
       min-spare: 20
     connection-timeout: 20000
-    
+
 spring:
   jpa:
     hibernate:
