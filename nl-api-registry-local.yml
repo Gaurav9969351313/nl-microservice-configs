@@ -22,3 +22,7 @@ eureka:
     expected-client-renewal-interval-seconds:  3
     eviction-interval-timer-in-ms:  2000
     wait-time-in-ms-when-sync-empty: 0
+
+spring:
+  profiles:
+    include: application-local
