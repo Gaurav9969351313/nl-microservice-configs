@@ -1,0 +1,24 @@
+server:
+  port: 8761
+
+logging.level:
+    com.netflix:
+        eureka: DEBUG
+        discovery: DEBUG
+eureka:
+  environment: Development
+  datacenter: On Premise
+  instance:
+    lease-renewal-interval-in-seconds: 30
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url.defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    renewal-percent-threshold: 0.49
+    response-cache-update-interval-ms: 5000
+    enable-self-preservation: true
+    expected-client-renewal-interval-seconds:  3
+    eviction-interval-timer-in-ms:  2000
+    wait-time-in-ms-when-sync-empty: 0
