@@ -23,7 +23,7 @@ management:
   endpoint:
     health:
       show-details: always
-    shutdown.enabled: true
+    # shutdown.enabled: true
     health.show-details: always
 
 logging.level:
