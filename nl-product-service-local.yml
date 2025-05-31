@@ -1,0 +1,7 @@
+logging:
+  level: INFO
+  format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+  file: logs/product-service.log
+  maxSize: 10MB
+  maxBackups: 5
+  enableConsole: true
