@@ -8,7 +8,7 @@ spring:
   cloud:
     # Route definitions of the system
     gateway:
-      discovery.locator.enabled: true
+      # discovery.locator.enabled: true
       routes:
         - id: products
           # lb:// is used to direct Spring Cloud Gateway to use the client-side load balancer
