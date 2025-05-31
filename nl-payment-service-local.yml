@@ -1,0 +1,12 @@
+server:
+  port: 5400
+
+spring:
+  application:
+    name: nl-payment-service
+    
+  datasource:
+    url: jdbc:mysql://localhost:3306/usersdb
+    username: adminuser
+    password: StrongPassword123!
+    driver-class-name: com.mysql.cj.jdbc.Driver

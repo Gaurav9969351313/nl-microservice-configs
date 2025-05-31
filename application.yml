@@ -39,3 +39,9 @@ server:
   error:
     include-message: always
     include-binding-errors: always
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true

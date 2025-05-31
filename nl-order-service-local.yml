@@ -1,12 +1,12 @@
 server:
-  port: 5200
+  port: 5300
 
 spring:
   application:
-    name: nl-product-service
-
+    name: nl-order-service
+    
   datasource:
-    url: jdbc:mysql://localhost:3306/productdb
+    url: jdbc:mysql://localhost:3306/ordersdb
     username: adminuser
     password: StrongPassword123!
     driver-class-name: com.mysql.cj.jdbc.Driver
